@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flas Bitacora</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body class="pink lighten-5" >
+    <header class="container center purple lighten-4">
+        <h1>Flash Bitácora</h1>
+        <p class="flow-text">"Publish anything", just in you browser.</p>
+    </header>
+    <section id="sec_botones" class="container">
+      <div class="fixed-action-btn horizontal">
+        <a class="btn-floating btn-large purple">
+          <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating pink waves-effect waves-teal btn-flat" href="#modal-1"><i class="material-icons">chat</i></a></li>
+          <li><a class="btn-floating yellow darken-1 waves-effect waves-teal btn-flat" href="#modal-2"><i class="material-icons">perm_media</i></a></li>
+          <li><a class="btn-floating red waves-effect waves-teal btn-flat " href="#modal-3"><i class="material-icons">today</i></a></li>
+          <li><a class="btn-floating cyan waves-effect waves-teal btn-flat" href="#modal-4"><i class="material-icons">video_library</i></a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="modal_1" class="container">
+      <div id="modal-1" class="modal modal-fixed-footer">
+         <div class="modal-content">
+            <div class="input-field col s12">
+               <input id="modal-chat-title" type="text" class="validate" data-length="20" />
+               <label for="title">Título</label>
+           </div>
+           <div class="input-field col s12">
+               <textarea id="modal-chat-message" class="materialize-textarea"></textarea>
+               <label for="message">Mensaje</label>
+           </div>
+         </div>
+         <div class="modal-footer">
+           <button class="btn modal-action modal-close waves-effect waves-light right pink darken-2 z-depth-5" type="submit" name="action" data-publication="text">Publicar
+           <i class="material-icons right">send</i>
+           </button>
+         </div>
+       </div>
+    </section>
+    <section id="modal_2" class="container">
+      <div id="modal-2" class="modal modal-fixed-footer">
+         <div class="modal-content">
+            <div class="input-field col s12">
+               <input id="modal-chat-title" type="text" class="validate" data-length="15" />
+               <label for="title">Título</label>
+           </div>
+           <div class="file-field input-field col s12">
+               <div class="btn">
+                   <span>Imagen</span>
+                   <input type="file" accept="image/*" id="image-file">
+               </div>
+               <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text">
+               </div>
+           </div>
+         </div>
+         <div class="modal-footer">
+           <button class="btn modal-action modal-close waves-effect waves-light right pink darken-2 z-depth-5" type="submit" name="action" data-publication="text">Publicar
+           <i class="material-icons right">send</i>
+           </button>
+         </div>
+       </div>
+    </section>
+    <section id="modal_3" class="container">
+      <div id="modal-3" class="modal modal-fixed-footer">
+         <div class="modal-content">
+           <div class="input-field col s12">
+                     <input type="text" class="validate" data-length="10" id="modal-event-title" />
+                     <label for="first_name">Título</label>
+                 </div>
+                 <div class="input-field col s12">
+                     <input type="date" class="datepicker" id="modal-event-date" placeholder="Fecha del evento">
+                 </div>
+                 <button class="btn waves-effect waves-light right green accent-2" type="submit" name="action" data-publication="event">Publicar
+                     <i class="material-icons right">send</i>
+                 </button>
+          </div>
+       </div>
+    </section>
+    <section id="modal_4" class="container">
+      <div id="modal-4" class="modal modal-fixed-footer">
+         <div class="modal-content">
+            <div class="input-field col s12">
+               <input id="modal-chat-title" type="text" class="validate" data-length="10" />
+               <label for="title">Título</label>
+           </div>
+           <div class="file-field input-field col s12">
+               <div class="btn">
+                   <span>Imagen</span>
+                   <input type="file" accept="image/*" id="image-file">
+               </div>
+               <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text">
+               </div>
+           </div>
+         </div>
+         <div class="modal-footer">
+           <button class="btn modal-action modal-close waves-effect waves-light right pink darken-2 z-depth-5" type="submit" name="action" data-publication="text">Publicar
+           <i class="material-icons right">send</i>
+           </button>
+         </div>
+       </div>
+    </section>
+    <section id="publicaciones" class="container">
+
+    </section>
+    <div id="modalVideo" class="modal">
+        <div class="modal-content row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" class="validate" data-length="10" id="modal-media-title" name="modal-media-title"
+                        />
+                        <label for="modal-media-title">Título</label>
+                    </div>
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>Video o Audio</span>
+                            <input type="file" accept="video/mp4,video/x-m4v,video/*, audio/mp3, audio/*" id="media-file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light right amber accent-2" type="submit" name="action" data-publication="media">Publicar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/materialize.js" charset="utf-8"></script>
+      <script src="js/app.js" charset="utf-8"></script>
+
+  </body>
+</html>
